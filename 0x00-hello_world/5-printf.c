@@ -1,11 +1,14 @@
 #include <stdio.h>
-/*
- * main - The program that uses printf function
+
+/**
+ * main - Entry point of the program
  *
- * Description: 'A program that prints grammar'
+ * Description: A program that prints with printf
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
 printf("with proper grammar, but the outcome is a piece of art,\n");
-Return:(0);
+return (0);
 }
