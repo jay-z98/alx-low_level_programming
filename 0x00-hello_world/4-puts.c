@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
+ * main - Entry point of program
  *
- * Description: A program that prints with printf
+ * Prints a text using puts command
  *
- * Return: Always 0 (success)
+ * Return: 0 (success)
  */
 int main(void)
 {
-printf("with proper grammar, but the outcome is a piece of art,\n");
+puts("\"Programming is like a multilingual puzzle,\"");
+
 return (0);
 }
-
