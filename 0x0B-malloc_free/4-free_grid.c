@@ -1,45 +1,22 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * argstostr - main entry
- * @ac: int input
- * @av: double pointer array
- * Return: 0
+ * free_grid - frees a 2 dimensional grid previously created by
+ * alloc_grid function.
+ * @grid: matrix double pointer
+ * @height: rows (pointer)
+ *
+ * Return: Nothing
  */
-char *argstostr(int ac, char **av)
+void free_grid(int **grid, int height)
 {
-int i, n, r = 0, l = 0;
-char *str;
+int i;
 
-if (ac == 0 || av == NULL)
-return (NULL);
-
-for (i = 0; i < ac; i++)
+for (i = 0; i < height; i++)
 {
-for (n = 0; av[i][n]; n++)
-l++;
+free(*(grid + i));
 }
-
-l += ac;
-str = malloc(sizeof(char) * (l + 1));
-
-if (str == NULL)
-return (NULL);
-
-for (i = 0; i < ac; i++)
-{
-for (n = 0; av[i][n]; n++)
-{
-str[r] = av[i][n];
-r++;
-}
-
-if (str[r] == '\0')
-{
-str[r++] = '\n';
-}
-}
-
-return (str);
+free(grid);
 }
